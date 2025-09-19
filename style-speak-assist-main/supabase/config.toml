@@ -1,0 +1,34 @@
+project_id = "nlfxblhiqckmwbvjpjhm"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[auth]
+enabled = true
+port = 54322
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["https://lovable.dev"]
+jwt_expiry = 3600
+enable_signup = true
+email_double_confirm_changes = true
+enable_manual_linking = false
+
+[db]
+port = 54323
+
+[storage]
+enabled = true
+port = 54324
+image_transformation = true
+file_size_limit = "50MiB"
+
+[edge_runtime]
+enabled = true
+port = 54325
+
+[functions.send-order-confirmation]
+verify_jwt = false
